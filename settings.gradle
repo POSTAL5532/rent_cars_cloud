@@ -1,0 +1,8 @@
+rootProject.name = 'demo'
+
+include 'users'
+include 'cars'
+include 'common'
+include 'config'
+include 'discovery'
+include 'gateway'

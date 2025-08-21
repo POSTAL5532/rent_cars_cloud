@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: users-service
+              uri: lb://users-service
+              predicates:
+                - Path=/users-service/**
+              filters:
+                - StripPrefix=1
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:9090/eureka
+  instance:
+    preferIpAddress: true

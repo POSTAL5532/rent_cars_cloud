@@ -1,0 +1,7 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: cars-service
+  config:
+    import: optional:configserver:http://127.0.0.1:9190
