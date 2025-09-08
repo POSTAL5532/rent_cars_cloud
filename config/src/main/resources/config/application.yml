@@ -18,14 +18,13 @@ eureka:
       defaultZone: http://127.0.0.1:9090/eureka
   instance:
     preferIpAddress: true
+    instance-id: ${spring.application.name}:${random.uuid}
 
 logging:
   level:
     root: info
     sql: info
     web: info
-    org.springframework.cloud.gateway: DEBUG
-    reactor.netty.http.client: DEBUG
   file:
     name: ./.local/logs/${spring.application.name}/${spring.application.name}-${server.port}.log
   logback:

@@ -3,11 +3,11 @@ GET http://127.0.0.1:8080/users-service/users
 Accept: application/json
 
 ### Get by ID
-GET http://127.0.0.1:8081/users/550e8400-e29b-41d4-a716-446655440009
+GET http://127.0.0.1:8080/users-service/users/550e8400-e29b-41d4-a716-446655440009
 Accept: application/json
 
 ### Create
-POST http://127.0.0.1:8081/users
+POST http://127.0.0.1:8080/users-service/users
 Content-Type: application/json
 
 {
@@ -17,7 +17,7 @@ Content-Type: application/json
 }
 
 ### Update
-PUT http://127.0.0.1:8081/users/550e8400-e29b-41d4-a716-446655440009
+PUT http://127.0.0.1:8080/users-service/users/550e8400-e29b-41d4-a716-446655440009
 Content-Type: application/json
 
 {
@@ -27,5 +27,5 @@ Content-Type: application/json
 }
 
 ### Delete
-DELETE http://127.0.0.1:8081/users/93b6b071-b4da-48b3-98cf-e6624663cb7e
+DELETE http://127.0.0.1:8080/users-service/users/9b1be0eb-6614-4521-96d3-a15d3e87f3d4
 Content-Type: application/json
