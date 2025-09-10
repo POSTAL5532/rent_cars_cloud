@@ -1,0 +1,38 @@
+### Get all orders
+GET http://127.0.0.1:8080/orders-service/orders
+Accept: application/json
+
+### Get order by ID
+GET http://127.0.0.1:8080/orders-service/orders/550e8402-e29b-41d4-a716-446655440001
+Accept: application/json
+
+### Get orders by user ID
+GET http://127.0.0.1:8080/orders-service/orders/user/550e8400-e29b-41d4-a716-446655440001
+Accept: application/json
+
+### Get orders by car ID
+GET http://127.0.0.1:8080/orders-service/orders/car/550e8401-e29b-41d4-a716-446655440001
+Accept: application/json
+
+### Create new order
+POST http://127.0.0.1:8080/orders-service/orders
+Content-Type: application/json
+
+{
+  "userId": "550e8400-e29b-41d4-a716-446655440004",
+  "carId": "550e8401-e29b-41d4-a716-446655440004"
+}
+
+### Update order
+PUT http://127.0.0.1:8080/orders-service/orders/550e8402-e29b-41d4-a716-446655440001
+Content-Type: application/json
+
+{
+  "userId": "550e8400-e29b-41d4-a716-446655440002",
+  "carId": "550e8401-e29b-41d4-a716-446655440005"
+}
+
+### Delete order
+DELETE http://127.0.0.1:8080/orders-service/orders/550e8402-e29b-41d4-a716-446655440003
+Content-Type: application/json
+

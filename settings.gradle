@@ -2,6 +2,7 @@ rootProject.name = 'demo'
 
 include 'users'
 include 'cars'
+include 'orders'
 include 'common'
 include 'config'
 include 'discovery'

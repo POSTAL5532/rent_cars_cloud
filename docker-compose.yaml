@@ -26,3 +26,16 @@ services:
     volumes:
       - .local/database/cars/:/var/lib/postgresql/data
       - ./cars/database:/docker-entrypoint-initdb.d
+
+  orders_db:
+    container_name: orders_db
+    image: postgres:14.1
+    environment:
+      POSTGRES_DB: orders_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: root
+    ports:
+      - "5433:5432"
+    volumes:
+      - .local/database/orders/:/var/lib/postgresql/data
+      - ./orders/database:/docker-entrypoint-initdb.d

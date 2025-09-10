@@ -1,0 +1,32 @@
+### Get all
+GET http://127.0.0.1:8080/cars-service/cars
+Accept: application/json
+
+### Get by ID
+GET http://127.0.0.1:8080/cars-service/cars/550e8401-e29b-41d4-a716-446655440009
+Accept: application/json
+
+### Create
+POST http://127.0.0.1:8080/cars-service/cars
+Content-Type: application/json
+
+{
+  "brand": "Toyota",
+  "model": "Camry",
+  "year": 2023
+}
+
+### Update
+PUT http://127.0.0.1:8080/cars-service/cars/550e8401-e29b-41d4-a716-446655440009
+Content-Type: application/json
+
+{
+  "brand": "Honda",
+  "model": "Accord",
+  "year": 2024
+}
+
+### Delete
+DELETE http://127.0.0.1:8080/cars-service/cars/550e8401-e29b-41d4-a716-446655440009
+Content-Type: application/json
+
