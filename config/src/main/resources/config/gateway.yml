@@ -29,3 +29,16 @@ eureka:
       defaultZone: http://127.0.0.1:9090/eureka
   instance:
     preferIpAddress: true
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    urls:
+      - name: Users Service
+        url: /users-service/v3/api-docs
+      - name: Cars Service
+        url: /cars-service/v3/api-docs
+      - name: Orders Service
+        url: /orders-service/v3/api-docs
