@@ -1,0 +1,2 @@
+### POST request to example server
+POST http://127.0.0.1:9190/actuator/refresh

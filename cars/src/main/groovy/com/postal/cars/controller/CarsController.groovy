@@ -3,6 +3,8 @@ package com.postal.cars.controller
 import com.postal.dto.CarDTO
 import com.postal.cars.model.Car
 import com.postal.cars.service.CarsService
+import org.springframework.beans.factory.annotation.Value
+import org.springframework.cloud.context.config.annotation.RefreshScope
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping
@@ -15,9 +17,13 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 @RequestMapping("/cars")
+@RefreshScope
 class CarsController {
 
     private final CarsService carsService
+
+    @Value('${someProp}')
+    String property
 
     CarsController(CarsService carsService) {
         this.carsService = carsService
@@ -25,6 +31,7 @@ class CarsController {
 
     @GetMapping
     ResponseEntity<List<CarDTO>> getAllCars() {
+        println "============================ " + property + " ============================"
         ResponseEntity.ok(carsService.all.collect { c -> c.toDTO() })
     }
 

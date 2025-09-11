@@ -30,3 +30,6 @@ Content-Type: application/json
 DELETE http://127.0.0.1:8080/cars-service/cars/550e8401-e29b-41d4-a716-446655440009
 Content-Type: application/json
 
+### POST request to example server
+POST http://127.0.0.1:8080/cars-service/actuator/refresh
+

@@ -1,10 +1,11 @@
 CREATE TABLE orders
 (
-    id            uuid         NOT NULL UNIQUE,
-    user_id       uuid         NOT NULL,
-    car_id        uuid         NOT NULL,
-    creation_date TIMESTAMP    NOT NULL,
-    update_date   TIMESTAMP    NOT NULL,
+    id            uuid      NOT NULL UNIQUE,
+    user_id       uuid      NOT NULL,
+    car_id        uuid      NOT NULL,
+    done          BOOLEAN   NOT NULL DEFAULT false,
+    creation_date TIMESTAMP NOT NULL,
+    update_date   TIMESTAMP NOT NULL,
     PRIMARY KEY (id)
 );
 

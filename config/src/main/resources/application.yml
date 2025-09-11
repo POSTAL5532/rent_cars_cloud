@@ -9,10 +9,15 @@ spring:
     config:
       server:
         native:
-          searchLocations: classpath:/config
+          search-locations: file:///d:/work/cars_rent_config
 eureka:
   client:
     serviceUrl:
       defaultZone: http://127.0.0.1:9090/eureka
   instance:
     preferIpAddress: true
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,refresh,info
